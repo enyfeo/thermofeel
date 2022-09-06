@@ -391,13 +391,7 @@ def ifs_step_intervals(step):
     assert step > 0
     assert step <= 360
 
-    if step <= 144:
-        assert step % 3 == 0
-        return step - 3
-    else:
-        if step <= 360:
-            assert step % 6 == 0
-            return step - 6
+    return step - 1
 
 
 @thermofeel.timer
